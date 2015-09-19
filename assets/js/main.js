@@ -61,10 +61,10 @@ function changePanel(id){
 function scrolling(){
     
     $(window).bind('DOMMouseScroll', function(e){
-        var delta = e.originalEvent.wheelDelta;
+        var delta = e.originalEvent.detail;
         var content = $('.panel.active .content-body').scrollTop();
         
-        $('.panel.active .content-body').scrollTop(content - delta);
+        $('.panel.active .content-body').scrollTop(content + delta);
 
      //prevent page fom scrolling
      //return false;
