@@ -395,7 +395,7 @@ a {
 body {
   max-width: 1000px;
   margin: 0 auto;
-  background-image: url(/assets/img/crossword.png); }
+  background-image: url(../img/crossword.png); }
 
 .container {
   position: relative;
@@ -595,7 +595,7 @@ body {
     bottom: 30px;
     right: 30px;
     background-color: #BAB9AC;
-    background-image: url(/assets/img/arrow.png);
+    background-image: url(../img/arrow.png);
     background-size: 40%;
     background-position: center;
     background-repeat: no-repeat;
