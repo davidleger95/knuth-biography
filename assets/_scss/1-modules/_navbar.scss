@@ -1,0 +1,108 @@
+.nav-button{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 50px;
+    padding: 0 10px;
+    background: none;
+    border: none;
+    z-index: 100;
+    span{
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin: 10px 0;
+        background: $primary;
+    }
+    &.close{
+        left: auto;
+        right: 0;
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        padding: 0;
+        span{
+            margin: 0;
+            transform-origin: center;
+            transform: rotateZ(45deg);
+            &:last-child{
+                transform: rotateZ(-45deg);
+            }
+        }
+    }
+    @media(max-width: 760px){
+        display: block;
+    }
+}
+.navbar{
+    position: relative;
+    display: block;
+    float: left;
+    height: 100vh;
+    width: 200px;
+    
+    .navbar-inner{
+        list-style: none;
+        padding: 20px 30px 20px 20px;
+        margin: 0;
+        text-align: right;
+        @include vertical-align();
+        right: 0;
+        .nav-item{
+            margin: 20px 0;
+            
+            a{
+                display: block;
+                text-decoration: none;
+                color: rgba($dark, 0.75);
+                font-style: italic;
+                border-right: 1px solid rgba(white, 0);
+                    padding-right: 9px;
+                
+                transition: all 0.3s ease-in-out;
+                &.active{
+                    color: $primary;
+                    transform: scale(1.3);
+                    font-weight: bold;
+                    //margin-right: -20px;
+                    &:hover{
+                        border-right: 1px solid rgba(white, 0);
+                        padding-right: 9px;
+                    }
+                }
+                
+                &:hover{
+                    color: $primary;
+                    border-right: 1px solid $primary;
+                    padding-right: 9px;
+                }
+            }
+        }
+    }
+    @media(max-width: 760px){
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -300px;
+        transition: left 0.3s ease-in-out;
+        &.active{
+            left: 0;
+        }
+        width: 300px;
+        z-index: 1000;
+        background: rgba(white, 0.9);
+        overflow-y: scroll;
+        .navbar-inner{
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        
+    }
+    @media(max-width: 500px){
+        left: -100%;
+        width: 100%;
+    }
+}

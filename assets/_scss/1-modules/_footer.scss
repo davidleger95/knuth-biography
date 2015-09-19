@@ -1,0 +1,19 @@
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    p{
+        text-align: center;
+        font-family: Palatino;
+        font-style: italic;
+        color: rgba(grey, 0.5);
+        
+        a{
+            color: rgba($primary, 0.8);
+        }
+    }
+    @media(max-height: 580px){
+        display: none;
+    }
+}

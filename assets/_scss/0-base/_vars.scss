@@ -1,0 +1,17 @@
+// colors
+$primary:   #D0021B;
+$accent:    #BAB9AC;
+
+$dark:      darken($primary, 10%);
+$light:     lighten($primary, 10%);
+
+/* Mixin */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  left: inherit;
+  right: inherit;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
